@@ -397,28 +397,28 @@ function isMoblie(isPhone = false) {
   const tempUser = navigator.userAgent;
 
   // isPhone이 true이면 휴대폰, false이면 휴대폰을 포함한 모바일 기기
-  if (isPhone) {
-    if (
-      (tempUser.indexOf("iPhone") > 0 ||
-        tempUser.indexOf("iPot") > 0 ||
-        tempUser.indexOf("Android") > 0) &&
-      window.innerWidth <= 500 &&
-      window.innerHeight <= 900
-    ) {
-      return true;
-    }
-    return false;
-  } else {
-    if (
-      tempUser.indexOf("iPhone") > 0 ||
-      tempUser.indexOf("iPad") > 0 ||
-      tempUser.indexOf("iPot") > 0 ||
-      tempUser.indexOf("Android") > 0
-    ) {
-      return true;
-    }
-    return false;
+  // if (isPhone) {
+  //   if (
+  //     (tempUser.indexOf("iPhone") > 0 ||
+  //       tempUser.indexOf("iPot") > 0 ||
+  //       tempUser.indexOf("Android") > 0) &&
+  //     window.innerWidth <= 500 &&
+  //     window.innerHeight <= 900
+  //   ) {
+  //     return true;
+  //   }
+  //   return false;
+  // } else {
+  if (
+    tempUser.indexOf("iPhone") > 0 ||
+    tempUser.indexOf("iPad") > 0 ||
+    tempUser.indexOf("iPot") > 0 ||
+    tempUser.indexOf("Android") > 0
+  ) {
+    return true;
   }
+  return false;
+  // }
 }
 
 // button hover 함수
